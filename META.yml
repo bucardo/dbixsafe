@@ -5,8 +5,9 @@ abstract            : Safe wrapper to DBI interface
 author:              
   - Greg Sabino Mullane <greg@endpoint.com>
 
-license             : BSD
+license             : bsd
 dynamic_config      : 1
+distribution_type   : module
 
 requires:
   DBI               : 1.49
@@ -27,7 +28,7 @@ resources:
   homepage          : http://bucardo.org/dbix_safe/index.html
   MailingList       : http://bucardo.org/dbix_safe/list.html
   bugtracker        : http://bucardo.org/dbix_safe/bugs.html
-  epository         : http://bucardo.org/dbix_safe/repo.html
+  repository        : http://bucardo.org/dbix_safe/repo.html
   license           : http://bucardo.org/dbix_safe/license.html
 meta-spec:
   version           : 1.3
