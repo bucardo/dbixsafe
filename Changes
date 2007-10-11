@@ -1,12 +1,16 @@
 Revision history for DBIx::Safe
 
-1.0.0
-	Original design by Jon Jensen <jon@endpoint.com>
-	and Greg Sabino Mullane <greg@endpoint.com>
+1.2.4
+    Public release
+
+1.2.0
+	Change to a pseudo-inside-out structure
 
 1.1.9
 	Fully functioning version, Postgres support only
 
-1.2.0
-	Change to a pseudo-inside-out structure
+1.0.0
+	Original design by Jon Jensen <jon@endpoint.com>
+	and Greg Sabino Mullane <greg@endpoint.com>
+
 
