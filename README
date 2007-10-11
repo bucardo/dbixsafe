@@ -4,7 +4,7 @@ DBIx::Safe - safer access to databases via DBI
 DESCRIPTION:
 ------------
 
-This is version 1.2.4 of DBIx::Safe
+This is version 1.2.5 of DBIx::Safe
 
 COPYRIGHT:
 ----------

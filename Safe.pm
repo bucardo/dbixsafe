@@ -17,7 +17,7 @@ use DBI 1.42;
 
 {
 
-our $VERSION = '1.2.4';
+our $VERSION = '1.2.5';
 
 *STDOUT->autoflush(1);
 *STDERR->autoflush(1);
@@ -540,7 +540,7 @@ DBIx::Safe - Safer access to your database through a DBI database handle
 
 =head1 VERSION
 
-This documents version 1.2.4 of the DBIx::Safe module
+This documents version 1.2.5 of the DBIx::Safe module
 
 =head1 SYNOPSIS
 
