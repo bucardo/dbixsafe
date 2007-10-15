@@ -36,13 +36,3 @@ if (! -e $CODE) {
 plan tests => 1;
 Test::Perl::Critic->import( -profile => $PROFILE );
 critic_ok($CODE);
-#all_critic_ok();
-
-__DATA__
-
-plan tests => 1;
-my $critic = Perl::Critic->new(-profile => $PROFILE);
-my @problems = $critic->critique($CODE);
-is(@problems, 0, "Passed Perl::Critic run");
-use Data::Dumper;
-
