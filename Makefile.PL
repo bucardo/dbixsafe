@@ -20,5 +20,7 @@ WriteMakefile(
 package MY;
 sub manifypods {
 	my $after = "\t \$(NOECHO) pod2html Safe.pm > Safe.pm.html\n\t\$(NOECHO) \$(RM_F) pod*.tmp pm_to_blib\n";
+	$after .= qq{\t\$(NOECHO) \$(PERL) -pi -e "s/<link.*?>//" Safe.pm.html\n};
+	$after .= qq{\t\$(NOECHO) \$(ECHO) Created Safe.pm.html\n};
 	return shift->SUPER::manifypods(@_) . $after;
 }

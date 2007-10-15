@@ -12,3 +12,5 @@ MANIFEST.SKIP
 Makefile.PL
 .perlcriticrc
 t/01safe.t
+t/02perlcritic.t
+t/03db.t

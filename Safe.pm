@@ -10,6 +10,7 @@
 package DBIx::Safe;
 
 use 5.008003;
+use utf8;
 use strict;
 use warnings;
 use IO::Handle;
@@ -253,7 +254,7 @@ sub selectall_arrayref {
 	my $slice = $attr->{Slice}; # typically undef, else hash or array ref
 	if (!$slice and $slice=$attr->{Columns}) {
 		if (ref $slice eq 'ARRAY') { # map col idx to perl array idx
-			$slice = [ @{$attr->{Columns}} ];   # take a copy
+			$slice = [ @{$attr->{Columns}} ]; # take a copy
 			for (@$slice) { $_-- }
 		}
 	}
@@ -533,7 +534,6 @@ __END__
 
 =pod
 
-
 =head1 NAME
 
 DBIx::Safe - Safer access to your database through a DBI database handle
@@ -649,7 +649,11 @@ Same as allow_attributes, but removes attributes from the list.
 
 DBIx::Safe has a very comprehensive test suite, so please use it! The only thing you should need is a 
 database connection, by setting the environment variables DBI_DSN and DBI_USER (and DBI_PASS if needed).
-Please report any test failures to the author.
+
+You can optionally run the module through Perl::Critic by setting the TEST_AUTHOR environment variable.
+You will need to have the modules Perl::Critic and Test::Perl::Critic installed.
+
+Please report any test failures to the author or bucardo-general@bucardo.org.
 
 =head2 Supported Databases
 
@@ -669,7 +673,7 @@ The latest development version can be checked out by using git:
 
 =head1 BUGS
 
-Bugs should be reported to the author.
+Bugs should be reported to the author or bucardo-general@bucardo.org.
 
 =head1 AUTHOR
 

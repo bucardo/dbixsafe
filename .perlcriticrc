@@ -1,25 +1,30 @@
 
-## perlcritic file for Bucardo scripts
+## perlcritic file for DBIx::Safe
 ## Usage: perlcritic -profile <thisfile> <scriptname>
 
 verbose = 8
 severity = 1
 
-[-Bangs::ProhibitNumberedNames]
 [-Bangs::ProhibitFlagComments]
+[-Bangs::ProhibitNumberedNames]
 [-Bangs::ProhibitVagueNames]
 
 [-CodeLayout::ProhibitHardTabs]
 [-CodeLayout::ProhibitParensWithBuiltins]
+[-CodeLayout::RequireTidyCode]
+
 [-ControlStructures::ProhibitCascadingIfElse]
 [-ControlStructures::ProhibitCStyleForLoops]
 [-ControlStructures::ProhibitDeepNests]
 [-ControlStructures::ProhibitPostfixControls]
 [-ControlStructures::ProhibitUnlessBlocks]
 
+[-Documentation::PodSpelling]
 [-Documentation::RequirePodSections]
+[-Documentation::RequirePODUseEncodingUTF8]
 
 [-ErrorHandling::RequireCarping]
+[-ErrorHandling::RequireUseOfExceptions]
 
 [-InputOutput::RequireBracedFileHandleWithPrint]
 
@@ -29,6 +34,7 @@ severity = 1
 [-Miscellanea::RequireRcsKeywords]
 
 [-Modules::ProhibitMultiplePackages]
+[-Modules::PerlMinimumVersion]
 
 [-References::ProhibitDoubleSigils]
 
@@ -36,9 +42,13 @@ severity = 1
 [-RegularExpressions::RequireLineBoundaryMatching]
 
 [-Subroutines::ProhibitExcessComplexity]
+[-Subroutines::RequireArgUnpacking]
 
 [-TestingAndDebugging::ProhibitNoWarnings]
 
+[-Tics::ProhibitLongLines]
+
+[-ValuesAndExpressions::ProhibitAccessOfPrivateData]
 [-ValuesAndExpressions::ProhibitCommaSeparatedStatements]
 [-ValuesAndExpressions::ProhibitEmptyQuotes]
 [-ValuesAndExpressions::ProhibitInterpolationOfLiterals]
@@ -46,6 +56,7 @@ severity = 1
 [-ValuesAndExpressions::ProhibitNoisyQuotes]
 [-ValuesAndExpressions::ProhibitVersionStrings]
 [-ValuesAndExpressions::RequireNumberSeparators]
+[-ValuesAndExpressions::RestrictLongStrings]
 
 [-Variables::ProhibitLocalVars]
 [-Variables::ProhibitPackageVars]
