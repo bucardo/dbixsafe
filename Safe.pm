@@ -631,7 +631,7 @@ Same as allow_regex, but will remove regexes from the list.
 
 Specifies regular expressions which are NOT allowed to run. Arguments and return the same as allow_regex().
 
-=head3 undeny regex()
+=head3 undeny_regex()
 
 Same as deny_regex, but will remove regexes from the list.
 
