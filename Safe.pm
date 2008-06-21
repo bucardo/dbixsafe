@@ -1,6 +1,6 @@
 # -*-cperl-*-
 #
-# Copyright 2006-2007 Greg Sabino Mullane <greg@endpoint.com>
+# Copyright 2006-2008 Greg Sabino Mullane <greg@endpoint.com>
 #
 # DBIx::Safe is a safer way of handling database connections.
 # You can specify exactly which commands can be run.
@@ -560,7 +560,7 @@ This documents version 1.2.5 of the DBIx::Safe module
 
 =head1 DESCRIPTION
 
-The purpose of this module is to give controlled, limited access to an application, 
+The purpose of this module is to give controlled, limited database access to an application, 
 rather than simply passing it a raw database handle through DBI. DBIx::Safe acts as 
 a wrapper to the database, by only allowing through the commands you tell it to. It 
 filters all things related to the database handle - methods and attributes.
@@ -579,6 +579,13 @@ statements to run (e.g. 'qr{SET TIMEZONE}'). You can specify a regular expressio
 that is NOT allowed to run (e.g. qr(UPDATE xxx}). Finally, you can indicate which 
 database attributes are allowed to be read and changed (e.g. 'PrintError'). For all 
 of the above, there are matching methods to remove them as well.
+
+Note that blocking all potentially harmful actions may be harder than it first seems.
+Consider a database that contains a function that deletes certain data. Allowing only
+SELECT statements will still not prevent all writes to that database, as SELECT mutator_function()
+will change data. Because of this difficulty it is best to think of DBIx::Safe as a module
+to help prevent accidental damage, rather than as a protection against people with
+malicious intent.
 
 =head2 Deciding what statements to allow
 
@@ -629,7 +636,7 @@ Same as allow_regex, but will remove regexes from the list.
 
 =head3 deny_regex()
 
-Specifies regular expressions which are NOT allowed to run. Arguments and return the same as allow_regex().
+Specifies regular expressions which are B<not> allowed to run. Arguments and return the same as allow_regex().
 
 =head3 undeny_regex()
 
@@ -681,7 +688,7 @@ Greg Sabino Mullane <greg@endpoint.com>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2006-2007 Greg Sabino Mullane <greg@endpoint.com>.
+Copyright 2006-2008 Greg Sabino Mullane <greg@endpoint.com>.
 
 This software is free to use: see the LICENSE file for details.
 
