@@ -35,3 +35,5 @@ and DBI_USER are set properly first:
    make test
    make install
 
+Follow development at https://github.com/bucardo/dbixsafe
+

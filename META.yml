@@ -28,7 +28,7 @@ resources:
   homepage          : http://bucardo.org/dbix_safe/index.html
   MailingList       : http://bucardo.org/dbix_safe/list.html
   bugtracker        : http://bucardo.org/dbix_safe/bugs.html
-  repository        : http://bucardo.org/dbix_safe/repo.html
+  repository        : https://github.com/bucardo/dbixsafe
   license           : http://bucardo.org/dbix_safe/license.html
 meta-spec:
   version           : 1.3
