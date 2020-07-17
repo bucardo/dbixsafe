@@ -3,7 +3,7 @@ name                : DBIx-Safe
 version             : 1.2.5
 abstract            : Safe wrapper to DBI interface
 author:              
-  - Greg Sabino Mullane <greg@endpoint.com>
+  - Greg Sabino Mullane <greg@turnstep.com>
 
 license             : bsd
 dynamic_config      : 1

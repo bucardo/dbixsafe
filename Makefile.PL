@@ -6,21 +6,21 @@ WriteMakefile(
     NAME         => 'DBIx::Safe',
     VERSION_FROM => 'Safe.pm',
     PREREQ_PM    => {
-					 DBD::Pg       => 1.49,
-					 DBI           => 1.49,
-					 Test::Simple  => 0.30,
-					 Test::More    => 0.61,
-					 Test::Harness => 2.03,
-				 },
-	ABSTRACT     => 'Safe wrapper to DBI interface',
-    AUTHOR       => 'Greg Sabino Mullane <greg@endpoint.com>',
+                     DBD::Pg       => 1.49,
+                     DBI           => 1.49,
+                     Test::Simple  => 0.30,
+                     Test::More    => 0.61,
+                     Test::Harness => 2.03,
+                 },
+    ABSTRACT     => 'Safe wrapper to DBI interface',
+    AUTHOR       => 'Greg Sabino Mullane <greg@turnstep.com>',
     NO_META      => 1,
     clean        => { FILES => '*~ *.tmp outgoingmail.*' },
 );
 package MY;
 sub manifypods {
-	my $after = "\t \$(NOECHO) pod2html Safe.pm > Safe.pm.html\n\t\$(NOECHO) \$(RM_F) pod*.tmp pm_to_blib\n";
-	$after .= qq{\t\$(NOECHO) \$(PERL) -pi -e "s/<link.*?>//" Safe.pm.html\n};
-	$after .= qq{\t\$(NOECHO) \$(ECHO) Created Safe.pm.html\n};
-	return shift->SUPER::manifypods(@_) . $after;
+    my $after = "\t \$(NOECHO) pod2html Safe.pm > Safe.pm.html\n\t\$(NOECHO) \$(RM_F) pod*.tmp pm_to_blib\n";
+    $after .= qq{\t\$(NOECHO) \$(PERL) -pi -e "s/<link.*?>//" Safe.pm.html\n};
+    $after .= qq{\t\$(NOECHO) \$(ECHO) Created Safe.pm.html\n};
+    return shift->SUPER::manifypods(@_) . $after;
 }

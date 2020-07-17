@@ -9,7 +9,7 @@ This is version 1.2.5 of DBIx::Safe
 COPYRIGHT:
 ----------
 
-	Copyright (c) 2007 Greg Sabino Mullane <greg@endpoint.com>
+	Copyright (c) 2007 Greg Sabino Mullane <greg@turnstep.com>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.3 or,
