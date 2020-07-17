@@ -690,6 +690,6 @@ Greg Sabino Mullane <greg@turnstep.com>
 
 Copyright 2006-2020 Greg Sabino Mullane <greg@turnstep.com>.
 
-This software is free to use: see the LICENSE file for details.
+This software is free to use under the PostgreSQL License: see the LICENSE file for details.
 
 =cut
