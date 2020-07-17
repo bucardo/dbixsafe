@@ -1,6 +1,6 @@
 # -*-cperl-*-
 #
-# Copyright 2006-2008 Greg Sabino Mullane <greg@turnstep.com>
+# Copyright 2006-2020 Greg Sabino Mullane <greg@turnstep.com>
 #
 # DBIx::Safe is a safer way of handling database connections.
 # You can specify exactly which commands can be run.
@@ -688,7 +688,7 @@ Greg Sabino Mullane <greg@turnstep.com>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2006-2008 Greg Sabino Mullane <greg@turnstep.com>.
+Copyright 2006-2020 Greg Sabino Mullane <greg@turnstep.com>.
 
 This software is free to use: see the LICENSE file for details.
 
